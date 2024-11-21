@@ -51,12 +51,13 @@ func NewBlockchain() *Blockchain {
 
 func main() {
     newblockchain := NewBlockchain()    
-    newblockchain.AddBlock("0.00000030 Sent to ellenrapps")  
-    newblockchain.AddBlock("0.00000500 Sent to ellenrapps")
-    newblockchain.AddBlock("0.00010000 Sent to ellenrapps") 
-    for _, blockInfo := range newblockchain.Blocks {               
-        fmt.Printf("Block Hash : %x\n", blockInfo.CurrentBlockHash)                
-        fmt.Printf("Previous Block Hash: %x\n", blockInfo.PreviousBlockHash) 
-        fmt.Printf("Message : %s\n", blockInfo.Message)                 
+    newblockchain.AddBlock("Transaction 1 After Genesis")  
+    newblockchain.AddBlock("Transaction 2 After Genesis")
+    newblockchain.AddBlock("Transaction 3 After Genesis") 
+    for i, blockInfo := range newblockchain.Blocks {
+		fmt.Printf("Block ID : %d \n", i)
+		fmt.Printf("Message : %s\n", blockInfo.Message)
+		fmt.Printf("Previous Block Hash: %x\n", blockInfo.PreviousBlockHash)                 
+        fmt.Printf("Block Hash : %x\n", blockInfo.CurrentBlockHash)                         
     } 
 }

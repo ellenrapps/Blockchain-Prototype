@@ -1,5 +1,5 @@
-# Blockchain From Scratch Prototype
-* Work in progress
+# Blockchain Basic Prototype Written in Go
+
 * Credits to:
   
   https://github.com/Jeiwan/blockchain_go
